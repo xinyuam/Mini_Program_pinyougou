@@ -1,0 +1,20 @@
+<Tabs tabs="{{tabs}}" bindtabsItemChange="handleTabsItemChange">
+    <view class="collect_main">
+        <view class="collect_title">
+            <text class="collect_tips active">全部</text>
+            <text class="collect_tips">正在热卖</text>
+            <text class="collect_tips">即将上线</text>
+        </view>
+        <view class="collect_content">
+            <navigator class="goods_item" wx:for="{{collect}}" wx:key="goods_id" url="/pages/goods_detail/index?goods_id={{item.goods_id}}">
+                <view class="goods_img_wrap">
+                    <image mode="widthFix" src="{{item.goods_small_logo?item.goods_small_logo:'http://qiniu.mdashen.com/%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E6%9A%82%E6%97%A0%E5%9B%BE%E7%89%87.jpg'}}"></image>
+                </view>
+                <view class="goods_info_wrap">
+                    <view class="goods_name">{{item.goods_name}}</view>
+                    <view class="goods_price">¥{{item.goods_price}}</view>
+                </view>
+            </navigator>
+        </view>
+    </view>
+</Tabs>

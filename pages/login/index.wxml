@@ -1,0 +1,5 @@
+<!-- button的下面样式，可以更改app.json文件的"style": "v2",去掉
+    button: not([size='mini']) -->
+<button type="primary" plain open-type="getUserInfo" bind:getuserinfo="handleGetUserInfo">
+    登录
+</button>
